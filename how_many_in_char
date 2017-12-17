@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+
+char str1[1000];//str1包含str2的个数 
+char str2[1000];
+scanf("%s",str1);
+scanf("%s",str2);
+int len2=strlen(str2);//str2中有多少个字符
+int len1=strlen(str1);
+int count=0;
+int i;
+int j;
+int l;
+for (i=0;i<len1-len2+1;i++)                  
+{   char small[len2];                     
+   
+    for(j=0;j<len2;j++)
+      {
+	  small[j]=str1[j+i];
+       
+	  }
+     
+    if(strcmp(small,str2)==0)
+	  count++ ;
+  
+  
+}
+printf("%d",count);
+return 0;
+}
